@@ -2,20 +2,23 @@
 # kind: replicated
 
 replicated_api_version: 2.29.0
-name: "Guardicore Enterprise"
+name: "Guardicore Centra Enterprise"
 
 properties:
   logo_url: https://www.guardicore.com/wp-content/uploads/2019/02/guardicore-logo-white-space.png
   app_url: http://{{repl ConfigOption "hostname" }}
-  console_title: "Guardicore Enterprise"
+  console_title: "Guardicore Centra Enterprise"
 
 host_requirements:
   replicated_version: ">=2.29.0"
 
 kubernetes:
   requirements:
-    total_cores: "2"
+    total_cores: "9001"
     total_memory: 8GB
+
+backup:
+  enabled: true
 
 config:
 - name: basic_config
